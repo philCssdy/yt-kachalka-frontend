@@ -1,0 +1,17 @@
+.mainpage {
+  body {
+    margin: 0;
+    background-color: #f5f5dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+  }
+
+  h1 {
+    font-size: large;
+    text-transform: uppercase !important;
+    display: flex;
+    justify-content: center;
+  }
+}

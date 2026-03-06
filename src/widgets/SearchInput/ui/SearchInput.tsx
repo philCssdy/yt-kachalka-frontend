@@ -1,7 +1,7 @@
 import { useState } from "react";
-import styles from "./searchinput.module.scss";
+import styles from "./Searchinput.module.scss";
 
-const TEST_URL = "https://jsonplaceholder.typicode.com/posts/1/comments";
+const TEST_URL = "  ";
 
 export const SearchInput = () => {
   const [url, setUrl] = useState("");
@@ -31,12 +31,19 @@ export const SearchInput = () => {
   };
 
   return (
-    <div className={styles.searchInput}>
-      <label>Введите Url</label>
-      <form onSubmit={handleSubmit}>
-        <input value={url} onChange={(e) => setUrl(e.target.value)}></input>
-        <button type="submit">Скачать</button>
-      </form>
+    <div>
+      <div className={styles.searchInput}>
+        <form onSubmit={handleSubmit}>
+          <input
+            placeholder="Вставить ссылку"
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+          ></input>
+          <button className={styles.submitbutton} type="submit">
+            Скачать
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
