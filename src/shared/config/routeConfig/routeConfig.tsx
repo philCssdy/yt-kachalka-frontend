@@ -10,23 +10,23 @@ export enum AppRoutes {
 }
 
 export const RoutePaths: Record<AppRoutes, string> = {
-  [AppRoutes.MAINPAGE]: "/",
-  [AppRoutes.HOWTOUSE]: "/howtouse",
-  [AppRoutes.NOT_FOUND]: "*",
+    [AppRoutes.MAINPAGE]: "/",
+    [AppRoutes.HOWTOUSE]: "/howtouse",
+    [AppRoutes.NOT_FOUND]: "*",
 };
 
 export const RouteConfig: Record<AppRoutes, RouteProps> = {
-  [AppRoutes.MAINPAGE]: {
-    path: RoutePaths[AppRoutes.MAINPAGE],
-    element: <Mainpage />,
-  },
+    [AppRoutes.MAINPAGE]: {
+        path: RoutePaths[AppRoutes.MAINPAGE],
+        element: <Mainpage />,
+    },
 
-  [AppRoutes.HOWTOUSE]: {
-    path: RoutePaths[AppRoutes.HOWTOUSE],
-    element: <Howtouse />,
-  },
-  [AppRoutes.NOT_FOUND]: {
-    path: RoutePaths[AppRoutes.NOT_FOUND],
-    element: <NotFoundpage />,
-  },
+    [AppRoutes.HOWTOUSE]: {
+        path: RoutePaths[AppRoutes.HOWTOUSE],
+        element: <Howtouse />,
+    },
+    [AppRoutes.NOT_FOUND]: {
+        path: RoutePaths[AppRoutes.NOT_FOUND],
+        element: <NotFoundpage />,
+    },
 };

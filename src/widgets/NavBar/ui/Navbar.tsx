@@ -3,33 +3,33 @@ import styles from "./NavBar.module.scss";
 import React, { useState } from "react";
 
 export const NavBar = () => {
-  const [selected, setSelected] = useState("");
+    const [selected, setSelected] = useState("");
 
-  const HandleOnChange = (event: React.ChangeEvent<HTMLSelectElement>) =>
-    setSelected(event.target.value);
+    const HandleOnChange = (event: React.ChangeEvent<HTMLSelectElement>) =>
+        setSelected(event.target.value);
 
-  return (
-    <div className={styles.navbar}>
-      <div>
-        <ul>
-          <li>
-            <Link to={"howtouse"}>Как использовть</Link>
-          </li>
-          <li>
-            <label>
-              Eще
-              <select value={selected} onChange={HandleOnChange}>
-                <option>Линк о нас</option>
-                <option>Линк политика конф</option>
-                <option>Линк</option>
-              </select>
-            </label>
-          </li>
-          <li>Link1</li>
-        </ul>
-      </div>
-    </div>
-  );
+    return (
+        <div className={styles.navbar}>
+            <div>
+                <ul>
+                    <li>
+                        <Link to={"howtouse"}>Как использовть</Link>
+                    </li>
+                    <li>
+                        <label>
+                            Eще
+                            <select value={selected} onChange={HandleOnChange}>
+                                <option>Линк о нас</option>
+                                <option>Линк политика конф</option>
+                                <option>Линк</option>
+                            </select>
+                        </label>
+                    </li>
+                    <li>Link1</li>
+                </ul>
+            </div>
+        </div>
+    );
 };
 
 // import { useState } from "react";

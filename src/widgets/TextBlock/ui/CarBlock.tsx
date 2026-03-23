@@ -5,7 +5,7 @@ interface CardBlockProps {
 }
 
 const CarBlock = ({ children }: CardBlockProps) => {
-  return <div className={styles.textblock}>{children}</div>;
+    return <div className={styles.textblock}>{children}</div>;
 };
 
 export default CarBlock;
