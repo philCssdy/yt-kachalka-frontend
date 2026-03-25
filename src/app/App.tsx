@@ -3,14 +3,14 @@ import "./styles/global.scss";
 import { AppRouter } from "./providers/ui/AppRouter";
 
 const App = () => {
-    return (
-        <>
-            <NavBar />
-            <div className="contentpage">
-                <AppRouter />
-            </div>
-        </>
-    );
+  return (
+    <div>
+      <NavBar />
+      <div className="contentpage">
+        <AppRouter />
+      </div>
+    </div>
+  );
 };
 
 export default App;
