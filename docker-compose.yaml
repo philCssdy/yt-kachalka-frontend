@@ -4,11 +4,10 @@ services:
   frontend:
     build: .
     ports:
-      - "3000:80"
+      - "8081:8080"
     volumes:
       - .:/app
-      # - ./src:/app/src
-      # - ./package.json:/app/package.json
-      # - ./package-lock.json:/app/package-lock.json
+      - /app/node_modules
     environment:
       - NODE_ENV=dev
+    
