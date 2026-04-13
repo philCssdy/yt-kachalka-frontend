@@ -1,13 +1,13 @@
 .inputWrapper {
   position: relative;
-  width: 300px; // или 100%, как тебе нужно
+  width: 300px;
 }
 
 .searchInput {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
-  padding: 8px 40px 8px 8px; // отступ справа для кнопки
+  padding: 8px 40px 8px 8px;
   font-size: 14px;
   box-sizing: border-box;
   border: 1px solid #ccc;

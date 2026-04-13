@@ -8,6 +8,7 @@ export const NavBar = () => {
       <Link to={"/"} className={styles.logo}>
         <Logo size={60} />
       </Link>
+      <span>yt-kachalka </span>
       <nav>
         <ul>
           <li>
