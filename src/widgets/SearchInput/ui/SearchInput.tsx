@@ -1,11 +1,12 @@
 import { useState } from "react";
-import styles from "./Searchinput.module.scss";
-import { CardBlock } from "../../CardBlock";
-import { ClipBoardButton } from "../../ClipBoardButton";
 
 const TEST_URL = "";
 
-export const SearchInput = () => {
+type SearchInputProps = {
+  className?: string;
+};
+
+export const SearchInput = ({ className }: SearchInputProps) => {
   const [url, setUrl] = useState("");
 
   async function sendUrlToBack(url: string) {
@@ -38,26 +39,21 @@ export const SearchInput = () => {
   };
 
   return (
-    <div>
-      <CardBlock>
-        <div className={styles.searchBoxInput}>
-          <form onSubmit={handleSubmit}>
-            <div className={styles.inputWrapper}>
-              <div className={styles.searchInput}>
-                <input
-                  placeholder="Вставить ссылку"
-                  value={url}
-                  onChange={(e) => setUrl(e.target.value)}
-                />
-                <ClipBoardButton onPaste={(text: string) => setUrl(text)} />
-              </div>
-            </div>
-            <button className={styles.submitButton} type="submit">
-              Скачать
-            </button>
-          </form>
-        </div>
-      </CardBlock>
+    <div className={`w-full mt-8 ${className || ""}`}>
+      <form onSubmit={handleSubmit} className="flex w-full gap-x-3">
+        <input
+          className="flex-1 px-6 py-3 border rounded-lg"
+          placeholder="Вставить ссылку"
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
+        />
+        <button
+          className="px-8 py-3 text-lg font-semibold bg-indigo-600 rounded-lg text-indigo-50 hover:bg-indigo-700"
+          type="submit"
+        >
+          Скачать
+        </button>
+      </form>
     </div>
   );
 };

@@ -1,26 +1,28 @@
-import { CardBlock } from "../../../widgets/CardBlock";
+import { DropDownList } from "../../../widgets/DropDownList";
 import { SearchInput } from "../../../widgets/SearchInput";
-import styles from "./Mainpage.module.scss";
 
 export const Mainpage = () => {
   return (
-    <div className={styles.mainpage}>
-      <div>
-        <h1>Скачать видео онлайн с Youtube</h1>
+    <div>
+      <div className="flex justify-center px-4 mt-10">
+        <SearchInput className="w-full max-w-4xl" />
+        <DropDownList />
       </div>
-      <SearchInput />
-      <div>
-        <CardBlock>
-          <p>
-            Скачать видео с Ютуб с помощью сервиса yt-kachalka бесплатно без
-            регистрации и СМС, продолжение читать в источнике...
-          </p>
-        </CardBlock>
-      </div>
-      <div>
-        <CardBlock>
-          <p> 123</p>
-        </CardBlock>
+      <div className="container flex mx-auto pt-18 pb-36 gap-x-8 ">
+        <h1 className="text-5xl font-black tracking-tight">
+          Скачайте видео с&nbsp;
+          <span className="text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text">
+            YouTube&nbsp;
+          </span>
+          в пару кликов!
+        </h1>
+        <p className="mt-4 text-lg text-gray-600">
+          Мы сделали это максимально просто! Вставьте ссылку на ролик - и через
+          мгновение скачайте его в нужном формате и качестве. Хотите посмотреть
+          офлайн, сохранить для монтажа или просто сохранить на память? Наш
+          сервис справится с задачей за пару секунд. Никаких сложных настроек —
+          всё работает «из коробки»!
+        </p>
       </div>
     </div>
   );

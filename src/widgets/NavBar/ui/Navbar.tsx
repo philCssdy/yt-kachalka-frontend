@@ -1,18 +1,23 @@
 import { Link } from "react-router-dom";
-import styles from "./Navbar.module.scss";
+
 import { Logo } from "../../Logo";
 
 export const NavBar = () => {
   return (
-    <div className={styles.navbar}>
-      <Link to={"/"} className={styles.logo}>
-        <Logo size={60} />
+    <div className="container flex items-center py-4 mx-auto gap-x-10">
+      <Link to={"/"} className="">
+        <Logo />
       </Link>
-      <span>yt-kachalka </span>
-      <nav>
-        <ul>
+      <span className="text-2xl font-black">yt-kachalka </span>
+      <nav className="flex justify-end grow">
+        <ul className="flex items-center gap-x-8">
           <li>
-            <Link to={"howtouse"}>Как использовть</Link>
+            <Link
+              to={"howtouse"}
+              className="font-semibold hover:text-indigo-600"
+            >
+              Как использовть
+            </Link>
           </li>
         </ul>
       </nav>
