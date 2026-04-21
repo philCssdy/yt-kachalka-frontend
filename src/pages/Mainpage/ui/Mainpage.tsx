@@ -6,9 +6,11 @@ export const Mainpage = () => {
     <div>
       <div className="flex justify-center px-4 mt-10">
         <SearchInput className="w-full max-w-4xl" />
+      </div>
+      <div className="flex justify-center py-5 align-middle">
         <DropDownList />
       </div>
-      <div className="container flex mx-auto pt-18 pb-36 gap-x-8 ">
+      <div className="container flex pt-8 mx-auto pb-36 gap-x-8 ">
         <h1 className="text-5xl font-black tracking-tight">
           Скачайте видео с&nbsp;
           <span className="text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text">
